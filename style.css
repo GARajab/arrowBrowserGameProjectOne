@@ -1,0 +1,235 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 20px;
+  box-sizing: border-box;
+  min-width: 540px;
+  height: 100vh;
+}
+
+.gameButtons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#scoreLabel {
+  background-color: #22b3d0;
+  padding: 18.5px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  color: rgb(255, 255, 255);
+  font-weight: 500;
+  height: 54px;
+  font-size: 20px;
+  width: fit-content;
+}
+#hintBtn {
+  background-color: #22b3d0;
+  padding: 15px 0px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  color: rgb(255, 255, 255);
+  font-weight: 500;
+  font-size: 20px;
+  width: 115px;
+  border: none;
+  cursor: pointer;
+}
+
+.titleAndInst {
+  text-align: center;
+  font-size: 40px;
+}
+h6 {
+  margin-bottom: 20px;
+}
+
+.img-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+  justify-content: center;
+  flex-direction: row;
+  margin-top: 10px;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+  justify-content: center;
+  flex-direction: row;
+  margin-top: 130px;
+}
+
+.card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 200px; /* Set the width of the card */
+  text-align: center;
+}
+.pcImg0 {
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 200px; /* Set the width of the card */
+  text-align: center;
+  height: 200px;
+}
+
+.pcImg0 img {
+  width: 200px;
+  height: auto;
+  transition: opacity 1s ease-in-out;
+  -webkit-transition: opacity 1s ease-in-out;
+  -moz-transition: opacity 1s ease-in-out;
+  -ms-transition: opacity 1s ease-in-out;
+  -o-transition: opacity 1s ease-in-out;
+}
+
+.pcImg0.hide-img img {
+  opacity: 0; /* Hide the image */
+}
+.card.hide-img img {
+  opacity: 0; /* Hide the image */
+}
+.hint {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+
+  /* align-items: ; */
+}
+
+.card img {
+  width: 200px;
+  height: auto;
+  transition: opacity 1s ease-in-out;
+  -webkit-transition: opacity 1s ease-in-out;
+  -moz-transition: opacity 1s ease-in-out;
+  -ms-transition: opacity 1s ease-in-out;
+  -o-transition: opacity 1s ease-in-out;
+}
+
+/* Updated button-container styles */
+.button-container {
+  display: flex;
+  justify-content: space-between; /* This will push the buttons to the far left and right */
+  padding: 0; /* Remove padding */
+  margin-top: -5px; /* Remove margin */
+  gap: 10px;
+  position: relative;
+}
+
+/* Set button styles */
+.btn,
+#resetFullGame {
+  background-color: #007bff; /* Bootstrap primary color */
+  color: white;
+  border: none;
+  padding: 10px 0; /* Adjust padding for vertical spacing; set horizontal padding to 0 in the next line */
+  margin: 0; /* Remove margins */
+  border-radius: 0; /* Optionally, remove border radius to match edges */
+  cursor: pointer;
+  flex: 1; /* Allow buttons to grow and fill the width */
+}
+#resetFullGame {
+  background-color: #c82333;
+  font-weight: 500;
+}
+#startGame {
+  background-color: #28a745; /* Bootstrap primary color */
+  color: white;
+  border: none;
+  padding: 10px 0; /* Adjust padding for vertical spacing*/
+  margin: 0; /* Remove margins */
+  border-radius: 0; /* Optionally, remove border radius to match edges */
+  cursor: pointer;
+  flex: 1;
+  font-weight: 500;
+}
+
+#resetFullGame,
+#startGame,
+#submitBtm {
+  width: 100px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  padding: 10px;
+  font-size: 30px;
+}
+
+/* Optional: Keep the buttons side by side with added horizontal space */
+.btn + .btn {
+  border-left: 1px solid white; /* Add a separator between buttons */
+}
+
+#submitBtnDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+}
+
+#submitBtm {
+  background-color: #128496;
+  color: white;
+  padding: 10px;
+  margin: 0;
+  cursor: pointer;
+  width: 300px;
+  border: none;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .card-container,
+  .img-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.spinner {
+  max-width: 300px;
+  max-height: 300px;
+  transition: transform 1s;
+  -webkit-transition: transform 1s;
+  -moz-transition: transform 1s;
+  -ms-transition: transform 1s;
+  -o-transition: transform 1s;
+}
+
+.spin {
+  animation: spin 0.3s;
+  -webkit-animation: spin 0.3s;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+canvas {
+  overflow-y: hidden;
+  overflow-x: hidden;
+  width: 100%;
+  margin: 0;
+}
